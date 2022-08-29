@@ -1,6 +1,7 @@
 import Divisor from '../components/Divisor.jsx'
 
 import { Stack } from '@mui/system'
+import { useSelector } from 'react-redux'
 
 function Calendar() {
   const totalMinutesPerDivisor = 60

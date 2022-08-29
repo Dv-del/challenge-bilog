@@ -23,8 +23,8 @@ function App() {
   const day = useSelector(store => store.Day)
 
   useEffect(() => {
-    dispatch(loadCalendar())
-  }, [dispatch])
+    loadCalendar(dispatch)
+  }, [dispatch, loadCalendar])
 
   const styleBox = {
     width: '800px',
@@ -35,15 +35,15 @@ function App() {
   const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
   const handleClickNow = event => {
-    dispatch(nowDay())
+    nowDay(dispatch)
   }
 
   const handleClickBefore = event => {
-    dispatch(beforeDay())
+    beforeDay(dispatch)
   }
 
   const handleClickNext = event => {
-    dispatch(nextDay())
+    nextDay(dispatch)
   }
 
   return (
