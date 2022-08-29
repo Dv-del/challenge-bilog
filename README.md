@@ -8,6 +8,9 @@ El desafío es construir un cronograma. En una pestaña del navegador, debe habe
 
 En este horario tiene que mostrar el día seleccionado teniendo la posibilidad de cambiar el día. Cada día tiene su propio tiempo y debe mostrarse como filas.
 
+![alt text](./public/1.png)
+![alt text](./public/2.png)
+
 # Tecnologías usadas
 
 - React
