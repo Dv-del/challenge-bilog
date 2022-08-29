@@ -15,8 +15,6 @@ import { Typography } from '@mui/material'
 import Divider from '@mui/material/Divider'
 import Chip from '@mui/material/Chip'
 
-import './App.css'
-
 function App() {
   const dispatch = useDispatch()
 
