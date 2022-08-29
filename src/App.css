@@ -1,38 +1,72 @@
-.App {
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+body {
+  font-family: futura;
+  padding: 1em;
+}
+
+.calendar-widget {
+  position: absolute;
+  height: 80vh;
+  min-width: 45vw;
+  margin: 0 auto;
+  border: 1px solid grey;
+}
+
+.calendar-widget__hours {
+  position: absolute;
+  left: 0;
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calendar-widget__hours__hour {
+  height: 4vh;
+  line-height: 4vh;
+  border-bottom: 1px solid hsla(0, 0%, 95%, 1);
+  text-align: left;
+  padding-left: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calendar-widget__hours__hour:hover {
+  background: hsla(150, 90%, 90%, 1);
+  cursor: pointer;
+}
+.calendar-widget__hours__hour:hover:after {
+  float: right;
+  content: '+';
+  font-size: 2em;
+  padding-right: 1vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.calendar-widget__hours__hour:nth-last-child(1) {
+  border-bottom: none;
 }
 
-.App-link {
-  color: #61dafb;
+.calendar-widget__appointments {
+  width: calc(100% - 60px);
+  height: 100%;
+  position: absolute;
+  left: 60px;
+  border-left: 1px solid grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calendar-widget__appointments__appointment {
+  line-height: 4vh;
+  padding-left: 1vh;
+  width: 100%;
+  position: absolute;
+  border: 1px solid hsla(0, 0%, 0%, 0.1);
+  background: HSLA(175, 50%, 50%, 0.3);
+  color: grey;
+}
+
+.calendar-widget__appointments__appointment:hover {
+  color: black;
+  background: HSLA(175, 50%, 50%, 0.6);
+  cursor: pointer;
 }
