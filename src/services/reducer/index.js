@@ -1,6 +1,6 @@
 const initialState = {
   Data: [],
-  Day: new Date(),
+  Day: new Date('2021-09-16T00:00:00'),
 }
 
 function rootReducer(state = initialState, action) {
