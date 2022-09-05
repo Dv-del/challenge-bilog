@@ -1,0 +1,44 @@
+.box {
+  .divisor {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ececec;
+  }
+
+  .box_time {
+    margin-left: -80px;
+    margin-top: -8px;
+    position: absolute;
+    font-size: 12px;
+    text-align: right;
+    width: 60px;
+
+    .time {
+      width: 300px;
+      margin-top: -20px;
+      padding-right: 10px;
+
+      transition: all 0.5s;
+
+      color: white;
+      background-color: rgba(255, 0, 0, 0.5);
+
+      cursor: pointer;
+    }
+
+    .active {
+      color: black;
+      background-color: rgba(0, 255, 0, 0.2);
+    }
+
+    .time:hover {
+      background-color: white;
+      color: black;
+
+      outline-style: solid;
+      outline-color: black;
+      outline-width: 0.5px;
+    }
+  }
+}

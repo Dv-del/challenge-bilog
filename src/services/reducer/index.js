@@ -10,11 +10,11 @@ function rootReducer(state = initialState, action) {
         ...state,
         Data: action.payload,
       }
-    case 'BEFORE_DAY':
-      const beforeDate = state.Day.setDate(state.Day.getDate() - 1)
+    case 'PREVIOUS_DAY':
+      const previousDate = state.Day.setDate(state.Day.getDate() - 1)
       return {
         ...state,
-        Day: new Date(beforeDate),
+        Day: new Date(previousDate),
       }
     case 'NEXT_DAY':
       const nextDate = state.Day.setDate(state.Day.getDate() + 1)

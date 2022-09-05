@@ -14,9 +14,9 @@ export const loadCalendar = async dispatch => {
   }
 }
 
-export const beforeDay = dispatch => {
+export const previousDay = dispatch => {
   return dispatch({
-    type: actionTypes.BEFORE_DAY,
+    type: actionTypes.PREVIOUS_DAY,
   })
 }
 
